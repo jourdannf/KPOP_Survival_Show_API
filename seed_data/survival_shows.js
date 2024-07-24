@@ -1,6 +1,7 @@
 //Import contestants
 
-const contestants = require("./contestants.js");
+// const contestants = require("./contestants.js");
+import contestants from "./contestants.js"
 
 const survivalShows = [
     {
@@ -199,4 +200,5 @@ contestants.forEach((c) => {
     }
 });
 
-module.exports = survivalShows;
+// module.exports = survivalShows;
+export default survivalShows;

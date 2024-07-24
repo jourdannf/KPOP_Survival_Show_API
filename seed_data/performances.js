@@ -483,4 +483,5 @@ const performances = [
 
 
 
-module.exports = performances;
+// module.exports = performances;
+export default performances;

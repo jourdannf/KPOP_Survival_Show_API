@@ -1,7 +1,7 @@
 //Import performances
 
-const stages = require("./performances.js");
-
+// const stages = require("./performances.js");
+import stages from "./performances.js";
 
 const contestants = [
     {
@@ -316,4 +316,5 @@ contestants.forEach((c) => {
     })
 });
 
-module.exports = contestants;
+// module.exports = contestants;
+export default contestants;
