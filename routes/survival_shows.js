@@ -1,11 +1,23 @@
 import express from "express";
 import db from "../db/conn.js"
 import { ObjectId } from "mongodb";
-import seedData from "../seed_data/survival_shows.js"
+import seedData from "../seed_data/survival_shows.js";
+import multer from "multer";
 
 const router = express.Router();
 
 const shows = await db.collection("shows");
+
+const multerStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "../uploads/images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, req.file.originalname);
+    }
+});
+
+const upload = multer({storage: multerStorage});
 
 router
     .route("/")
@@ -56,11 +68,24 @@ router
         performances.deleteMany({show: showName});
         
         //Send back the result of the show that's been deleted
+        //Might wanna modify if statement later on to check that everything's been deleted
         let result = await shows.deleteOne(query);
-        res.send(result);
-
-        //second query on the performances from that show
-        //third query on the contestants from that show
+        if (result) res.status(200).send(result);
+        else res.status(404).send("Resource Not Found");
     })
 
+
+//Update thumbnail image for any survival show
+router
+    .route("/:id/update")
+    .patch(upload.single("thumbnailImg"),async (req,res) => {
+        
+        
+        let result = shows.updateOne({_id: new ObjectId(req.params.id)},{
+            $set: {img: req.file}
+        });
+
+        if (result) res.status(200).send(result);
+        else res.status(404).send("Resource Not Found");
+    })
 export default router;
