@@ -5,18 +5,24 @@ import dotenv from "dotenv";
 // const dotenv = require("dotenv");
 dotenv.config();
 
-// const shows = require("./seed_data/survival_shows");
+//Import Seed Data
 import shows from "./seed_data/survival_shows.js"
 import contestants from "./seed_data/contestants.js"
 import performances from "./seed_data/performances.js"
+
+//Import Routers
+import contestantsRouter from "./routes/contestants.js"
+import performancesRouter from "./routes/performances.js"
+import showsRouter from "./routes/survival_shows.js"
 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-//Connecting to the Database
+app.use("/contestants", contestantsRouter);
+app.use("/performances", performancesRouter);
+app.use("/shows", showsRouter);
 
-// let db = conn.db(dbName);
 
 app.get("/", (req, res)=> {
     res.send("Welcome To K-Pop Survival Show API");
