@@ -32,10 +32,11 @@ app.get("/", (req, res)=> {
 
 //Seeding the data collections
 app.get("/shows/seed", async (req, res)=> {
-   let Shows = db.collection("shows");
-   Shows.deleteMany({}) //Deletes everyting already in the database
-   Shows.insertMany(shows);
-   res.send("Done!");
+//     let Shows = db.collection("shows");
+   
+//    Shows.deleteMany({}) //Deletes everyting already in the database
+//    Shows.insertMany(shows);
+//    res.send("Done!");
 });
 
 app.get("/contestants/seed", async (req, res)=> {

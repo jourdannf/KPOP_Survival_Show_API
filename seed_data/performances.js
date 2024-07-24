@@ -1,5 +1,6 @@
 const performances = [
     {
+        show: "Girls On Fire",
         name: "Standing Next to You",
         originalSong: false,
         artist: "Jungkook",
@@ -48,6 +49,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Hwaa",
         originalSong: false,
         artist: "(G)I-DLE",
@@ -96,6 +98,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Rest",
         originalSong: false,
         artist: "Doyoung",
@@ -144,6 +147,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "When This Rain Stops",
         originalSong: false,
         artist: "Wendy",
@@ -192,6 +196,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Fire!",
         originalSong: true,
         artist: "Young K",
@@ -240,6 +245,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Trend",
         originalSong: true,
         artist: "Sunwoojunga",
@@ -288,6 +294,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Done!",
         originalSong: true,
         artist: "Gaeko",
@@ -336,6 +343,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Audition",
         originalSong: true,
         artist: "Yoon Jong Shin",
@@ -384,6 +392,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Dirty Cash",
         originalSong: false,
         artist: "BIGBANG",
@@ -400,6 +409,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Get A Guitar",
         originalSong: false,
         artist: "RIIZE",
@@ -416,6 +426,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Obliviate",
         originalSong: false,
         artist: "IU",
@@ -432,6 +443,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "28 Reasons",
         originalSong: false,
         artist: "Seulgi",
@@ -448,6 +460,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "D.I.S.C.O",
         originalSong: false,
         artist: "Uhm Jung Hwa & T.O.P",
@@ -464,6 +477,7 @@ const performances = [
         link: ""
     },
     {
+        show: "Girls On Fire",
         name: "Something",
         originalSong: false,
         artist: "TVXQ!",
