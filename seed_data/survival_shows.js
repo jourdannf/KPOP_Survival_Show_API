@@ -189,15 +189,26 @@ const survivalShows = [
 //Fill up the winners and losers based on the show
 
 contestants.forEach((c) => {
-    const show = survivalShows.find((s) => {
-        return s.name == c.show;
+    //Filters out the contestants appearances to the ones currently stored in the database
+    const appearances = survivalShows.filter((s) => {
+       //Return every show that's in the contestants show
+
+       return c.show.includes(s.name);
+
     });
 
-    if (c.topTen.winner){
-        show.winners.push(c.name);
-    }else {
-        show.losers.push(c.name);
-    }
+    //For each show find if the contestant won or not
+
+    appearances.forEach((a)=> {
+        c.results.forEach((r) => {
+            if (a.name == r.showTitle && r.finalEp.winner){
+                a.winners.push(c.name);
+            }else if (a.name == r.showTitle && r.eliminated.loser){
+                a.losers.push(c.name);
+            }
+        })
+    })
+
 });
 
 // module.exports = survivalShows;

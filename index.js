@@ -19,6 +19,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json());
+
 app.use("/contestants", contestantsRouter);
 app.use("/performances", performancesRouter);
 app.use("/shows", showsRouter);

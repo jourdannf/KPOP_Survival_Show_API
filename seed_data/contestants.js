@@ -11,18 +11,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: true,
-            ranking: 3,
-            points: 949.88
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 3,
+                    points: 949.88
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Hwang Seyoung",
@@ -31,18 +36,36 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire", "Produce 101"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: true,
-            ranking: 2,
-            points: 975.88
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 2,
+                    points: 975.88
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            },
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 5
+                }
+            }
+        ]
     },
     {
         name: "Cho Yein",
@@ -51,18 +74,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: false,
-            ranking: 7,
-            points: 748.60
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: false,
+                    ranking: 7,
+                    points: 748.60
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Jung Yuri",
@@ -71,18 +99,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: false,
-            ranking: 9,
-            points: 687.13
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: false,
+                    ranking: 9,
+                    points: 687.13
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Khan Amina",
@@ -91,18 +124,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: false,
-            ranking: 10,
-            points: 674.83
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: false,
+                    ranking: 10,
+                    points: 674.83
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Park Seojeong",
@@ -111,18 +149,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: false,
-            ranking: 8,
-            points: 699.31
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: false,
+                    ranking: 8,
+                    points: 699.31
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Kim Kyuri",
@@ -131,18 +174,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: false,
-            ranking: 6,
-            points: 759.86
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: false,
+                    ranking: 6,
+                    points: 759.86
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Kang Yunjeong",
@@ -151,18 +199,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: true,
-            ranking: 4,
-            points: 858.80
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 4,
+                    points: 858.80
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Yang Drea Irae",
@@ -171,18 +224,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: true,
-            ranking: 5,
-            points: 835.95
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 5,
+                    points: 835.95
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Lee Nayoung",
@@ -191,18 +249,23 @@ const contestants = [
         nationality: ["Korean", "French"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: true,
-            winner: true,
-            ranking: 1,
-            points: 990.90
-        },
-        eliminated: {
-            loser: false,
-            episode: NaN,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 1,
+                    points: 990.90
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
     },
     {
         name: "Choi Aim",
@@ -211,18 +274,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: false,
-            winner: false,
-            ranking: NaN,
-            points: NaN
-        },
-        eliminated: {
-            loser: true,
-            episode: 9,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 9,
+                }
+            }
+        ]
     },
     {
         name: "Lee Arumsoul",
@@ -231,18 +299,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: false,
-            winner: false,
-            ranking: NaN,
-            points: NaN
-        },
-        eliminated: {
-            loser: true,
-            episode: 9,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 9,
+                }
+            }
+        ]
     },
     {
         name: "Lim Okyeon",
@@ -251,18 +324,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: false,
-            winner: false,
-            ranking: NaN,
-            points: NaN
-        },
-        eliminated: {
-            loser: true,
-            episode: 9,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 9,
+                }
+            }
+        ]
     },
     {
         name: "Yoon Minseo",
@@ -271,18 +349,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: false,
-            winner: false,
-            ranking: NaN,
-            points: NaN
-        },
-        eliminated: {
-            loser: true,
-            episode: 9,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 9,
+                }
+            }
+        ]
     },
     {
         name: "RETA",
@@ -291,18 +374,23 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: "Girls On Fire",
+        show: ["Girls On Fire"],
         performances: [],
-        topTen: {
-            made: false,
-            winner: false,
-            ranking: NaN,
-            points: NaN
-        },
-        eliminated: {
-            loser: true,
-            episode: 9,
-        }
+        results: [
+            {
+                showTitle: "Girls On Fire",
+                finalEp: {
+                    made: false,
+                    winner: false,
+                    ranking: NaN,
+                    points: NaN
+                },
+                eliminated: {
+                    loser: true,
+                    episode: 9,
+                }
+            }
+        ]
     },
 ];
 
