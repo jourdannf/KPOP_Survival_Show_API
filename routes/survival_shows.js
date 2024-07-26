@@ -75,7 +75,7 @@ router
         }
 
         let result = await collection.insertOne(newDoc);
-        if (result) res.status(204).send(result);
+        if (result) res.status(204).send("Submit successful!");
         else res.status(400).send("Resource not created")
     })
 
