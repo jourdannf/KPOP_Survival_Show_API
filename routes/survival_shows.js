@@ -26,7 +26,8 @@ const upload = multer({storage: multerStorage});
 router
     .route("/")
     .get(async (req, res) => {
-        const result = await shows.find().sort({name: 1}).limit(8).toArray();
+        const result = await shows.find().sort({name: 1}).toArray();
+        console.log(result);
         if (result) res.status(200).render("survival_shows", {shows: result});
         else res.status(404).send("Resource Not Found");
     })

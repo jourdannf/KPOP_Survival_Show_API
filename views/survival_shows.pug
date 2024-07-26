@@ -9,13 +9,13 @@ head
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous")
 
 body
-    h1 Survival Shows
-    div(class="container")
+    h1(class="text-center") Survival Shows
+    div(class="container ")
         div(class="row")
             each show in shows
                 div(class="card col-3")
                     img(src=show.img)
-                    div
+                    div(class="text-center")
                         h3= show.name
         div(class="row")
             a(href="/shows/add") Add a Survival Show     
