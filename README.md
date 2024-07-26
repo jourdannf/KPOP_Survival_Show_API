@@ -8,7 +8,7 @@ Users can add a survival show to the database as long as it's under on the main 
 
 Users can enter this information about the survival show they want to add by clicking the link at the bottom of the survival shows screen to navigate to a form.
 
-If a user deletes a survival show from the database, all of the performances from that survival show is deleted along with every contestant whose only appearance was on that show (appearances are based on the list of shows that are currently in the database).
+If a user deletes a survival show from the database, all of the performances from that survival show is deleted along with every contestant whose only appearance on a survival show ever was on that show.
 
 A user can also update the name of the survival show in the database, by making a patch request to the following route: ":/id/update"
 

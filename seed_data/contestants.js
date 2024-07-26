@@ -98,7 +98,7 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: ["Girls On Fire"],
+        show: ["Girls On Fire", "Blossom With Love"],
         performances: [],
         results: [
             {
@@ -248,7 +248,7 @@ const contestants = [
         nationality: ["Korean", "French"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: ["Girls On Fire"],
+        show: ["Girls On Fire", "Dream Academy"],
         performances: [],
         results: [
             {
@@ -348,7 +348,7 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: ["Girls On Fire"],
+        show: ["Girls On Fire", "CAP-TEEN"],
         performances: [],
         results: [
             {
@@ -373,7 +373,7 @@ const contestants = [
         nationality: ["Korean"],
         img: "",
         bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
-        show: ["Girls On Fire"],
+        show: ["Girls On Fire", "Youth With You - Season 2"],
         performances: [],
         results: [
             {
@@ -387,6 +387,131 @@ const contestants = [
                 eliminated: {
                     loser: true,
                     episode: 9,
+                }
+            }
+        ]
+    },
+    {
+        name: "Jeon Somi",
+        gender: "Female",
+        birthday: new Date("2001-04-09"),
+        nationality: ["Korean"],
+        img: "",
+        bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
+        show: ["Girls On Fire"],
+        performances: [],
+        results: [
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 1,
+                    points: 1204
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
+    },
+    {
+        name: "Kim Sejeong",
+        gender: "Female",
+        birthday: new Date("1996-08-28"),
+        nationality: ["Korean"],
+        img: "",
+        bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
+        show: ["Girls On Fire"],
+        performances: [],
+        results: [
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 2,
+                    points: 1180
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
+    },
+    {
+        name: "Choi Yoojung",
+        gender: "Female",
+        birthday: new Date("1999-11-12"),
+        nationality: ["Korean"],
+        img: "",
+        bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
+        show: ["Girls On Fire"],
+        performances: [],
+        results: [
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 3,
+                    points: 438778
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
+    },
+    {
+        name: "Kim Chungha",
+        gender: "Female",
+        birthday: new Date("1996-02-09"),
+        nationality: ["Korean"],
+        img: "",
+        bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
+        show: ["Girls On Fire"],
+        performances: [],
+        results: [
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 4,
+                    points: 403633
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
+                }
+            }
+        ]
+    },
+    {
+        name: "Kim Sohye",
+        gender: "Female",
+        birthday: new Date("1999-07-19"),
+        nationality: ["Korean"],
+        img: "",
+        bio: "So seas. Beginning seas they're subdue living meat land evening green. For own beast fowl. Whose moving. Of fruitful i sea divided cattle land they're from. All great green female god doesn't, their grass deep bearing stars behold form have divide together divided called female, image i of. Us fly.",
+        show: ["Girls On Fire"],
+        performances: [],
+        results: [
+            {
+                showTitle: "Produce 101",
+                finalEp: {
+                    made: true,
+                    winner: true,
+                    ranking: 5,
+                    points: 229732
+                },
+                eliminated: {
+                    loser: false,
+                    episode: NaN,
                 }
             }
         ]
