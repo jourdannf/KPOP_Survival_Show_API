@@ -5,13 +5,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
 
-// const db = require("./conn.js");
 import dotenv from "dotenv";
-// const dotenv = require("dotenv");
 dotenv.config();
 
 //Import Seed Data
-import shows from "./seed_data/survival_shows.js"
 import contestants from "./seed_data/contestants.js"
 import performances from "./seed_data/performances.js"
 
@@ -19,7 +16,6 @@ import performances from "./seed_data/performances.js"
 import contestantsRouter from "./routes/contestants.js"
 import performancesRouter from "./routes/performances.js"
 import showsRouter from "./routes/survival_shows.js"
-import survivalShows from "./seed_data/survival_shows.js";
 
 const app = express();
 
@@ -43,15 +39,6 @@ app.set("view engine", "pug");
 app.get("/", async (req, res)=> {
     res.send("Welcome To K-Pop Survival Show API");
 });
-
-//Seeding the data collections
-// app.get("/shows/seed", async (req, res)=> {
-//     let Shows = db.collection("shows");
-   
-//    Shows.deleteMany({}) //Deletes everyting already in the database
-//    Shows.insertMany(shows);
-//    res.send("Done!");
-// });
 
 app.get("/contestants/seed", async (req, res)=> {
     let Shows = db.collection("contestants");

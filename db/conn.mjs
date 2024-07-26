@@ -1,14 +1,9 @@
-// const dotenv = require("dotenv");
-// const MongoClient = require("mongodb").MongoClient;
-
 import dotenv from "dotenv";
 import {MongoClient} from "mongodb";
 
 const dbName = "kpopSurvivalShowDB";
 
 dotenv.config();
-
-
 
 const client = new MongoClient(process.env.ATLAS_URI);
 

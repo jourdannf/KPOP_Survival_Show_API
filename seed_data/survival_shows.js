@@ -1,6 +1,5 @@
 //Import contestants
 
-// const contestants = require("./contestants.js");
 import contestants from "./contestants.js"
 
 const survivalShows = [

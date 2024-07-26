@@ -13,9 +13,9 @@ If a user deletes a survival show from the database, all of the performances fro
 A user can also update the name of the survival show in the database, by making a patch request to the following route: ":/id/update"
 
 If you'd like to start off with a clean slate of data, you can travel to the following routes to refresh the database:
-"/shows/seed"
-"/contestants/seed"
-"/performances/see"
+* "/shows/seed"
+* "/contestants/seed"
+* "/performances/see"
 
 ## Languages Used ##
 

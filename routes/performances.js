@@ -3,8 +3,6 @@ import db from "../db/conn.mjs"
 
 const router = express.Router();
 
-
-
 router
     .route("/")
     .get(async (req, res) => {

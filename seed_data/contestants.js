@@ -1,6 +1,5 @@
 //Import performances
 
-// const stages = require("./performances.js");
 import stages from "./performances.js";
 
 const contestants = [
