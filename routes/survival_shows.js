@@ -55,10 +55,24 @@ router
     })
     .post(upload.single("posterImg"), async (req, res) => {
         let collection = await db.collection("shows");
-        let newDoc = req.body;
-        newDoc.img = `../images/${req.file.filename}`;
-        newDoc.winners = [];
-        newDoc.losers = [];
+        let newDoc = {
+            name: req.body.name,
+            gender: req.body.gender,
+            runtime: {
+                startDate: new Date(req.body.startDate),
+                endDate: new Date(req.body.endDate)
+            },
+            network: req.body.network,
+            description: req.body.description,
+            img: `../images/${req.file.filename}`,
+            contestantsNum: Number(req.body.contestantsNum),
+            winnersNum: Number(req.body.winnersNum),
+            mc: [req.body.mc],
+            episodesNum: Number(req.body.episodesNum),
+            winners: [],
+            losers: [],
+            winnerName: req.body.winnerName
+        }
 
         let result = await collection.insertOne(newDoc);
         if (result) res.status(204).send(result);
