@@ -79,6 +79,33 @@ router
         else res.status(400).send("Resource not created")
     })
 
+//Test for validation 
+router
+    .route("/badrequest")
+    .post(async (req, res)=> {
+        let collection = await db.collection("shows");
+        let newDoc = {
+            name: "The Show",
+            gender: "Female",
+            runtime: {
+                startDate: "2020-12-6",
+                endDate: "2021-01-24"
+            },
+            network: "ABC",
+            description: "This is some text",
+            img: `../images/`,
+            contestantsNum: 1,
+            winnersNum: "2",
+            mc: ["Jang Jiwon"],
+            episodesNum: 10,
+            winners: [],
+            losers: [],
+            winnerName: "WINNER"
+        }
+
+        await collection.insertOne(newDoc);
+    })
+
 router
     .route("/:id")
     .get(async (req, res) => {
@@ -118,7 +145,7 @@ router
 //Update name for any survival show
 router
     .route("/:id/update")
-    .patch(upload.single("thumbnailImg"),async (req,res) => {
+    .patch(async (req,res) => {
         
         
         let result = shows.updateOne({_id: new ObjectId(req.params.id)},{
