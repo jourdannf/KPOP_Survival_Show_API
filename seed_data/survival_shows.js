@@ -13,7 +13,7 @@ const survivalShows = [
         },
         network: "JTBC",
         description: "A competition consisting of only female main vocalist material to create a new strong vocal group (such as MAMAMOO) dominating a \"NEW KPOP\" genre. Girls On Fire means 'passionate and cool women' and represents so-called 'women who know how to have fun' who enjoy the stage with their own music style.",
-        img: "",
+        img: "../images/girls_on_fire_poster.jpg",
         contestantsNum: 50,
         winnersNum: 5,
         mc: ["Jang Do-yeon"],

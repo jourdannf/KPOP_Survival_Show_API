@@ -1,8 +1,12 @@
 import express from "express";
-import db from "../db/conn.js"
+import db from "../db/conn.mjs"
 import { ObjectId } from "mongodb";
 import seedData from "../seed_data/survival_shows.js";
+import path from "path";
 import multer from "multer";
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
 
 const router = express.Router();
 
@@ -10,10 +14,10 @@ const shows = await db.collection("shows");
 
 const multerStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "../uploads/images");
+        cb(null, path.join(__dirname, "../uploads/images"));
     },
     filename: (req, file, cb) => {
-        cb(null, req.file.originalname);
+        cb(null, file.originalname);
     }
 });
 
@@ -22,11 +26,16 @@ const upload = multer({storage: multerStorage});
 router
     .route("/")
     .get(async (req, res) => {
+
+    //     let everything = await db.collection("shows").find().sort({name: 1}).limit(8).toArray()
+
+    // res.render("survival_shows", {shows: everything});
+
         
         // const shows = await db.collection("shows");
-        const result = await shows.find().limit(10).toArray();
-        if (result) res.status(200).send(result);
-        else res.status(404).send("Resource Not Found")
+        const result = await shows.find().sort({name: 1}).limit(8).toArray();
+        if (result) res.status(200).render("survival_shows", {shows: result});
+        else res.status(404).send("Resource Not Found");
     })
 
 //Seeding the data
@@ -37,6 +46,23 @@ router
         Shows.deleteMany({}) //Deletes everyting already in the database
         Shows.insertMany(seedData);
         res.send("Done!");
+    })
+
+router
+    .route("/add")
+    .get((req, res) => {
+        res.render("add_survival_show");
+    })
+    .post(upload.single("posterImg"), async (req, res) => {
+        let collection = await db.collection("shows");
+        let newDoc = req.body;
+        newDoc.img = `../images/${req.file.filename}`;
+        newDoc.winners = [];
+        newDoc.losers = [];
+
+        let result = await collection.insertOne(newDoc);
+        if (result) res.status(204).send(result);
+        else res.status(400).send("Resource not created")
     })
 
 router
@@ -75,14 +101,14 @@ router
     })
 
 
-//Update thumbnail image for any survival show
+//Update name for any survival show
 router
     .route("/:id/update")
     .patch(upload.single("thumbnailImg"),async (req,res) => {
         
         
         let result = shows.updateOne({_id: new ObjectId(req.params.id)},{
-            $set: {img: req.file}
+            $set: {name: req.body.name}
         });
 
         if (result) res.status(200).send(result);

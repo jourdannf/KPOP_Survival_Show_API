@@ -1,5 +1,10 @@
 import express from "express";
-import db from "./db/conn.js";
+import db from "./db/conn.mjs";
+import path from "path";
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+
 // const db = require("./conn.js");
 import dotenv from "dotenv";
 // const dotenv = require("dotenv");
@@ -14,6 +19,7 @@ import performances from "./seed_data/performances.js"
 import contestantsRouter from "./routes/contestants.js"
 import performancesRouter from "./routes/performances.js"
 import showsRouter from "./routes/survival_shows.js"
+import survivalShows from "./seed_data/survival_shows.js";
 
 const app = express();
 
@@ -21,23 +27,31 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+//Set up static files
+app.use("/images", express.static(path.join(__dirname, "uploads/images")));
+
+//Set up the Routes
+
 app.use("/contestants", contestantsRouter);
 app.use("/performances", performancesRouter);
 app.use("/shows", showsRouter);
 
+//Set up the Views
+app.set("views", "./views");
+app.set("view engine", "pug");
 
-app.get("/", (req, res)=> {
+app.get("/", async (req, res)=> {
     res.send("Welcome To K-Pop Survival Show API");
 });
 
 //Seeding the data collections
-app.get("/shows/seed", async (req, res)=> {
+// app.get("/shows/seed", async (req, res)=> {
 //     let Shows = db.collection("shows");
    
 //    Shows.deleteMany({}) //Deletes everyting already in the database
 //    Shows.insertMany(shows);
 //    res.send("Done!");
-});
+// });
 
 app.get("/contestants/seed", async (req, res)=> {
     let Shows = db.collection("contestants");
